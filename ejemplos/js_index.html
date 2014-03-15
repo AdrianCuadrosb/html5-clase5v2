@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript</title>
+        <meta charset="UTF-8"/>
+        <script>
+            var mensaje = "texto texto";
+            var numero = 3;
+            
+            var persona={
+                nombre: "Daniela",
+                edad: 30
+            };
+            
+            var miFuncion = function(){
+                document.write("<p>" + persona.nombre +"</p>");
+            };
+            
+            miFuncion();
+            
+            var sumar = function(a, b){
+                return a + b;
+            };
+            
+            var multiplicar = function(x, y){
+                return x * y;
+            };
+          
+            var operacion = function(unaFuncion){
+                return unaFuncion(3,4);
+            };
+        
+            var resultado = operacion(sumar);
+            document.write("<p>" + resultado + "</p>");
+
+            resultado = operacion(multiplicar);
+            document.write("<p>" + resultado + "</p>");
+            
+      /*   var operacion = function(unaFuncion){
+             return unaFuncion(4,5);
+         };
+         
+         var resultado = operacion(suma);
+         document.write("<p>El resultado es " + resultado + "</p>");
+         var resultado = operacion(multiplicacion);
+         document.write("<p>Ahora el resultado es " + resultado + "</p>");*/
+        </script>
+        
+    </head>
+    <body>
+        <h1>Aprendieno JavaScript</h1>
+    </body>
+</html>

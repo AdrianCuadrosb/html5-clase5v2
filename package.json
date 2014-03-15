@@ -1,0 +1,23 @@
+{
+	"name": "serverjs",
+	"version": "0.0.0",
+	"description": "servidor de la clase 4",
+	"main": "servidor.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "daniela",
+	"license": "ISC",
+	"dependencies": {
+		"express": "3.3",
+		"dustjs-linkedin": "2.3.3",
+		"dustjs-helpers":"1.1.2",
+		"consolidate": "0.10.0"			
+	},
+	"engines": {
+		"node": ">= 0.6.0",
+		"npm": ">= 1.0.0"
+	},
+	"private": true,
+	"main": "servidor.js"
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Ejemplo query selector</title>
+
+        <style type="text/css">
+			p {
+				border-style: solid;
+				padding: 10px;
+				margin-bottom: 20px;
+			}
+
+			div {
+				border-style: solid;
+				border-color: green;
+				padding: 10px;
+				margin-bottom: 20px;
+			}
+
+			#parrafo3 {
+				display: none;
+			}
+
+			.esquinas {
+				/* ------------ ESQUINAS REDONDAS ---------------*/
+				-webkit-border-radius: 10px;
+				-moz-border-radius: 10px;
+				-o-border-radius: 10px;
+				border-radius: 10px;
+			}
+
+			.sombras {
+				/*------------------ SOMBRAS ---------------------*/
+				/*sombras*/
+				-webkit-box-shadow: 0px 0px 5px 3px #333;
+				-moz-box-shadow: 0px 0px 5px 3px #333;
+				-o-box-shadow: 0px 0px 5px 3px #333;
+				box-shadow: 0px 0px 5px 3px #333;
+			}
+
+        </style>
+
+        <!-- IMPORTAMOS jQuery-->
+        <script src="../javascript/jquery-1.10.2.min.js"></script>
+        <script>
+			$(function() {
+			    //1.- HOLA MUNDO
+				//alert("Hola Mundo!!");
+				
+				//2.-MANIPULAR EL DOM
+                //var parrafos = $("p");
+                //obtengo la caja con id log y con id parrafo2
+                //var div_log = $("#log");
+                //var parrafo_2 = $("#parrafo2");
+                //obtengo las cajas con clase relleno
+                //var parrafos_con_relleno = $(".relleno");
+                //OBTENGO EL TEXTO DE PARRAFO 2 Y LO MUESTRO EN EL ALERT
+                //alert("el texto del parrafo 2 es " +parrafo_2.html());
+                //PONGO EN EL LOG EL TEXTO DEL PARRAFO 2
+                //div_log.html(parrafo_2.html());
+                //OBTENGO EL ID DEL LOG Y LO MUESTRO EN UN ALERT
+                //alert("el ID de la caja log es " + div_log.attr("id"));
+                //CAMBIO LA CLASE DEL LOG POR ESQUINAS REDONDAS
+                //div_log.attr("class", "esquinas");                
+                //A LOS 3 PARRAFOS LES AGREGO SOMBRAS Y ESQUINAS REDONDAS
+                //parrafos.addClass("esquinas sombras");               
+                //LE QUITO EL RELLENO AL PARRAFO 2
+                //parrafo_2.removeClass("relleno");
+                
+                //3.-EVENTO CLICK
+                //ESCUCHO EL EVENTO CLICK EN EL BOTON
+                /*boton.click(function() {
+                    //CUANDO OCURRE EL EVENTO AGREGO SOMBRAS Y ESQUINAS REDONDAS A LOS PARRAFOS
+                    parrafos.addClass("sombras esquinas");
+                });*/
+                //ESCUCHO EL EVENTO CLICK EN CUALQUIER CAJA
+                /*$(document).click(function() {
+                    //CUANDO OCURRE EL EVENTO AGREGO SOMBRAS Y ESQUINAS REDONDAS A LOS PARRAFOS
+                    parrafos.addClass("sombras esquinas");
+                });*/
+               
+               //4.-ANIMACIONES FADE
+               //ESCUCHO EL EVENTO CLICK EN EL BOTON
+                /*boton.click(function() {
+                    //CUANDO PUCHO EL BOTON MUESTRO EL PARRAFO 3 (estaba oculto)
+                    parrafo_3.fadeIn("slow");
+                });*/
+                //ESCUCHO EL EVENTO CLICK EN LA CAJA LOG
+               /* div_log.click(function() {
+                    //CUANDO PUCHO EL BOTON MUESTRO EL PARRAFO 3 (estaba oculto)
+                    div_log.fadeOut("slow");
+               });*/
+              
+              //5.-ANIMACIONES SLIDE Y CALLBACKS
+              //ESCUCHO EL EVENTO CLICK EN EL BOTON
+               /* boton.click(function() {
+                    //CUANDO PUCHO EL BOTON MUESTRO EL PARRAFO 3 (estaba oculto)
+                    //Y OCULTO EL LOG
+                    //parrafo_3.fadeIn("slow");
+                    //div_log.fadeOut("slow");
+                    
+                    //OCULTA UN ELEMENTO Y MUESTRA EL OTRO ASINCRONA
+                    //parrafo_3.fadeToggle("slow");
+                    //div_log.fadeToggle("slow");
+                    
+                    //DE MANERA SINCRONA
+                    parrafo_3.fadeToggle("slow", 
+                        function(){
+                            div_log.fadeToggle("slow");}
+                            );
+                });
+			});*/
+        </script>
+    </head>
+    <body>
+
+        <p id="parrafo1" class="relleno">
+            parrafo 1
+        </p>
+        <p id="parrafo2" class="relleno">
+            parrafo 2
+            <span>span1</span>
+            <span> SPAN2</span>
+        </p>
+        <p id="parrafo3">
+            parrafo 3
+        </p>
+
+        <div id="log">
+            log
+        </div>
+
+        <button id="boton">
+            Cambiar parrafo
+        </button>
+
+    </body>
+</html>
